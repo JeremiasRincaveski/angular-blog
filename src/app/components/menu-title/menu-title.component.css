@@ -1,0 +1,10 @@
+div {
+  border-top: 1px solid rgba(169, 169, 169, 0.1);
+  border-bottom: 1px solid rgba(169, 169, 169, 0.1);
+}
+
+h1 {
+  font-size: 17vw;
+  text-transform: uppercase;
+  text-align: center;
+}
