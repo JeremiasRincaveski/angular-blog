@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+  imgsrc:string = "./assets/carros.jpg";
+  titulo:string = "Carros";
+  descricao:string = "Carros de todos os tipos";
 
   constructor() { }
 

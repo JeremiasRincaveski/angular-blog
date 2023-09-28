@@ -31,4 +31,5 @@ div > ul:first-of-type li:first-of-type {
 li {
   letter-spacing: 1px;
   font-weight: 300;
+  cursor: pointer;
 }
