@@ -7,6 +7,7 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { MenuTitleComponent } from './components/menu-title/menu-title.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainNewsComponent } from './components/main-news/main-news.component';
+import { ContentComponent } from './pages/content/content.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MainNewsComponent } from './components/main-news/main-news.component';
     MenuBarComponent,
     MenuTitleComponent,
     HomeComponent,
-    MainNewsComponent
+    MainNewsComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
