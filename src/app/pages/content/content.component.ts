@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { dataFake } from '../../data/dataFake';
 
 @Component({
   selector: 'app-content',
@@ -6,13 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-  imgsrc:string = "./assets/carros.jpg";
-  titulo:string = "Carros";
-  descricao:string = "Carros de todos os tipos";
+  imgsrc:string = "";
+  titulo:string = "";
+  descricao:string = "";
+  private id:string | null = ""
 
-  constructor() { }
+  constructor(
+    private route:ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.id = params['id'];
+    })
+
+    this.setValuesToComponent(this.id);
+  }
+
+  setValuesToComponent(id:string | null) {
+    const result = dataFake.find(item => item.id === id);
+    
+    if(result) {
+      this.imgsrc = result.imgsrc;
+      this.titulo = result.titulo;
+      this.descricao = result.descricao;
+    }
   }
 
 }
